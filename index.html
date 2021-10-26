@@ -12,6 +12,16 @@
             $("#show").click(function (){
                 $("p").show();
             });
+            $("#start").click(function(){
+                var div = $("div");
+                div.animate({left: '200px'}, "slow");
+                div.animate({bottom: "70px"}, "fast");
+                div.animate({ fontColor: 'red'});
+                div.animate({fontSize: '100px'}, "slow");
+            });
+            $("#reload").click(function(){
+                window.location.reload();
+            });
         });
     </script>
 </head>
@@ -21,5 +31,12 @@
 </p>
 <button id="hide">Hide</button>
 <button id="show">Show</button>
+
+<button id="start">Start Animation</button>
+<button id="reload">Reload</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div style="height:100px;width:200px;position:absolute;">HELLO</div>
+
 </body>
 </html>
